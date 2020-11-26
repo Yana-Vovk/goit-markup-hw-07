@@ -1,0 +1,34 @@
+/* Выезжающий текст */
+.overlay-wrapping {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bkg);
+  justify-content: center;
+  align-items: center;
+
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects .overlay {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+  margin: 24px;
+}
+
+.projects .link:hover .overlay-box,
+.projects .link:focus .overlay-box {
+  transform: translatey(0);
+}

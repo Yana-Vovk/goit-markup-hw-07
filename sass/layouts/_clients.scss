@@ -1,0 +1,35 @@
+/* Секция клиенты */
+.clients .list {
+  display: flex;
+}
+
+.clients-box {
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--sosial-icon);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-icon {
+  fill: var(--sosial-icon);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-link:hover .client-icon,
+.customer-link:focus .client-icon {
+  fill: var(--active-color);
+}
+
+.customer-link:hover .clients-box,
+.customer-link:focus .clients-box {
+  border: 1px solid var(--active-color);
+}
