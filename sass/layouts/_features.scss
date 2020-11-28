@@ -2,33 +2,32 @@
 
 .features {
   padding-top: 94px;
+
+  .li-item {
+    max-width: 270px;
+  }
+
+  .list {
+    @extend %flex-wrap;
+  }
+
+  .li-item {
+    width: calc((100% - 90px) / 4);
+  }
+
+  .li-item:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+
+  .li-item:not(:nth-last-child(-n + 4)) {
+    margin-bottom: 30px;
+  }
 }
 
 .features p,
 .team p {
   margin-top: 10px;
   margin-bottom: 0px;
-}
-
-.features .li-item {
-  max-width: 270px;
-}
-
-.features .list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.features .li-item {
-  width: calc((100% - 90px) / 4);
-}
-
-.features .li-item:not(:nth-child(4n)) {
-  margin-right: 30px;
-}
-
-.features .li-item:not(:nth-last-child(-n + 4)) {
-  margin-bottom: 30px;
 }
 
 .grey-box {

@@ -10,6 +10,11 @@
   border-radius: 4px;
   @extend %centered;
   @include transition(border);
+
+  .customer-link:hover &,
+  .customer-link:focus & {
+    border: 1px solid $active-color;
+  }
 }
 
 .clients li:not(:last-child) {
@@ -19,14 +24,9 @@
 .client-icon {
   fill: $sosial-icon;
   @include transition(fill);
-}
 
-.customer-link:hover .client-icon,
-.customer-link:focus .client-icon {
-  fill: $active-color;
-}
-
-.customer-link:hover .clients-box,
-.customer-link:focus .clients-box {
-  border: 1px solid $active-color;
+  .customer-link:hover &,
+  .customer-link:focus & {
+    fill: $active-color;
+  }
 }

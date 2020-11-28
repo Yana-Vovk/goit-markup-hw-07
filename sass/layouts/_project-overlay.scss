@@ -14,6 +14,11 @@
   background-color: $overlay-bkg;
   transform: translatey(100%);
   @include transition(transform);
+
+  .projects .link:hover &,
+  .projects .link:focus & {
+    transform: translatey(0);
+  }
 }
 
 .projects .overlay {
@@ -23,9 +28,4 @@
   letter-spacing: 0.03em;
   color: $secondary-color;
   margin: 24px;
-}
-
-.projects .link:hover .overlay-box,
-.projects .link:focus .overlay-box {
-  transform: translatey(0);
 }

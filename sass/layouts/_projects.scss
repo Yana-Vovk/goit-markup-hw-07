@@ -23,8 +23,7 @@
 }
 
 .projects .list {
-  display: flex;
-  flex-wrap: wrap;
+  @extend %flex-wrap;
 }
 
 .projects .li-item {
