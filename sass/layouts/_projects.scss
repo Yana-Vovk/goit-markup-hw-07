@@ -12,7 +12,7 @@
 }
 
 .projects p {
-  color: var(--main-color);
+  color: $main-color;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -32,9 +32,9 @@
 }
 
 .projects-wrapping {
-  border: 1px solid var(--light-line);
+  border: 1px solid $light-line;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(box-shadow);
 }
 
 .projects .li-item:not(:nth-child(3n)) {

@@ -26,17 +26,17 @@
 }
 
 .head-line {
-  border-bottom: 1px solid var(--line-header);
+  border-bottom: 1px solid $line-header;
 }
 
 /* Стили для шапки */
 .headnav .link {
-  color: var(--heading-color);
+  color: $heading-color;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(color);
 }
 
 .headnav .link:hover,
@@ -49,16 +49,16 @@
 .info:hover,
 .info:focus,
 .logo-blue {
-  color: var(--active-color);
+  color: $active-color;
 }
 
 .contacts .link {
-  color: var(--main-color);
+  color: $main-color;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(color);
 }
 
 .headnav .li-item {
@@ -69,7 +69,7 @@
   content: '';
   width: 100%;
   height: 4px;
-  background: var(--active-color);
+  background: $active-color;
   border-radius: 2px;
 
   position: absolute;
@@ -83,12 +83,12 @@
   fill: currentColor;
   margin-right: 10px;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(fill);
 }
 
 .contacts .link:hover .contacts-icon,
 .contacts .link:focus .contacts-icon,
 .close-button:hover .close-x,
 .close-button:focus .close-x {
-  fill: var(--active-color);
+  fill: $active-color;
 }
