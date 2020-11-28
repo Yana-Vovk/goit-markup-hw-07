@@ -62,10 +62,7 @@
   height: 44px;
   border-radius: 50%;
   background-color: $join-sircle;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  @extend %centered;
   @include transition(background-color);
 }
 

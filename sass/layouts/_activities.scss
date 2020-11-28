@@ -1,30 +1,35 @@
 /* Раздел чем мы занимаемся */
-.inside-section .list {
-  display: flex;
-  flex-wrap: wrap;
-}
+.inside-section {
+  margin-top: 94px;
+  padding-bottom: 94px;
 
-.inside-section .li-item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
+  & .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.inside-section .li-item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
-}
+  & .li-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
 
-.inside-section .li-item {
-  position: relative;
-}
+  & .li-item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
 
-.inside-section .link::before {
-  content: '';
-  display: inline-block;
-  width: 100%;
-  height: 70px;
-  background: $img-overlay-2;
+  & .li-item {
+    position: relative;
+  }
 
-  position: absolute;
-  bottom: 0;
+  & .link::before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    background: $img-overlay-2;
+
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .overlay-text {
@@ -35,9 +40,7 @@
   width: 100%;
   height: 70px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centered;
 
   font-weight: 700;
   line-height: 1.14;

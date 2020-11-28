@@ -48,10 +48,8 @@
 }
 
 .acception {
-  display: flex;
+  @extend %centered;
   text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 
 .chk-box {
